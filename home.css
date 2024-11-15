@@ -9,7 +9,7 @@ body {
 
 .home {
   display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
+  justify-content: center;
   align-items: center;
   background-color: #f0e5a6;
   width: 100%;
@@ -17,11 +17,11 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between; /* Căn đều các phần tử theo chiều ngang */
-  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  max-width: 1440px; /* Giới hạn chiều rộng */
-  position: relative; /* Cần thiết cho việc định vị nút hamburger */
+  max-width: 1440px;
+  position: relative;
 }
 
 .logo img {
@@ -37,6 +37,7 @@ body {
 .navigation ul {
   display: flex;
   list-style: none;
+  margin-top: 15px;
 }
 
 .navigation li {
@@ -80,20 +81,20 @@ body {
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .header {
-    flex-direction: column; /* Đảm bảo logo, menu và login nằm theo chiều dọc */
-    align-items: flex-start; /* Căn trái các phần tử */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .navigation ul {
-    display: none; /* Ẩn menu theo mặc định */
+    display: none;
     width: 100%;
-    flex-direction: column; /* Đặt menu theo chiều dọc */
+    flex-direction: column;
     padding: 0;
-    background-color: #f0e5a6; /* Thêm màu nền để menu nổi bật */
-    position: absolute; /* Đặt menu ở vị trí tuyệt đối */
-    top: 70px; /* Đặt menu dưới logo */
-    right: 0; /* Đặt menu ở bên phải */
-    z-index: 999; /* Đảm bảo menu hiển thị trên các phần tử khác */
+    background-color: #f0e5a6;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 999;
     text-align: center;
     padding-bottom: 15px;
   }
@@ -107,52 +108,48 @@ body {
   .navigation li a {
     padding: 10px;
     width: 100%;
-    text-align: left; /* Căn trái các item menu */
+    text-align: left;
   }
 
   .navigation.active ul {
-    display: flex; /* Hiển thị menu khi có class 'active' */
+    display: flex;
   }
 
   /* Nút hamburger */
   .menu-toggle {
-    display: block; /* Hiển thị nút hamburger trên màn hình nhỏ */
+    display: block;
     cursor: pointer;
     font-size: 30px;
     color: #000;
-    position: absolute; /* Định vị nút hamburger */
-    top: 20px; /* Đặt nút hamburger cách phần trên của header 20px */
-    right: 20px; /* Đặt nút hamburger ở góc trên bên phải */
-    z-index: 1000; /* Đảm bảo nút hamburger hiển thị trên các phần tử khác */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
   }
 
   .menu-toggle:hover {
     color: #1fb7f1;
   }
 
-  /* Login phần tử nằm dưới cùng của menu */
   .login {
-    display: none; /* Ẩn phần login theo mặc định */
+    display: none;
     padding: 10px 20px;
     width: 100%;
     background-color: #f0e5a6;
-    text-align: left; /* Căn trái login */
+    text-align: left;
   }
 
-  /* Hiển thị phần login khi menu mở */
   .navigation.active + .login {
     display: block;
   }
 }
 
-/* Ẩn nút hamburger trên màn hình rộng (desktop) */
 @media screen and (min-width: 769px) {
   .menu-toggle {
-    display: none; /* Ẩn nút hamburger trên màn hình rộng */
+    display: none;
   }
-
   .navigation ul {
-    display: flex; /* Hiển thị menu theo dạng ngang */
+    display: flex;
   }
 
   .login {
@@ -161,4 +158,8 @@ body {
     justify-content: space-between;
     margin-left: 20px;
   }
+}
+.banner {
+  width: 100%;
+  max-height: 650px;
 }
