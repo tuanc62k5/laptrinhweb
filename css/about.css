@@ -1,0 +1,48 @@
+/* Reset CSS */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* css phần ảnh about */
+
+.about-image {
+  position: relative; /* Để dùng position cho các phần tử bên trong */
+  display: inline-block; /* Hoặc bạn có thể dùng block nếu cần toàn bộ chiều rộng */
+  width: 100%;
+}
+
+.about-image img {
+  display: block; /* Đảm bảo không có khoảng trống xung quanh ảnh */
+  width: 100%; /* Hoặc đặt kích thước phù hợp */
+  max-height: 500px;
+}
+
+.about-image h1 {
+  position: absolute; /* Đặt thẻ h1 chồng lên ảnh */
+  top: 50%; /* Căn chỉnh giữa theo trục dọc */
+  left: 50%; /* Căn chỉnh giữa theo trục ngang */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Điều chỉnh vị trí để thẻ h1 nằm chính giữa */
+  color: white; /* Chọn màu chữ phù hợp để nổi bật trên ảnh */
+  font-size: 2rem; /* Kích thước chữ phù hợp */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Tạo bóng cho chữ để dễ đọc hơn */
+  text-align: center;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about {
+  padding: 50px 150px;
+  text-align: justify;
+  font-size: 18px;
+}
+
+.about h1 {
+  margin-bottom: 50px;
+}
