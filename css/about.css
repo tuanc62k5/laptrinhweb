@@ -1,12 +1,3 @@
-/* Reset CSS */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
 /* css phần ảnh about */
 
 .about-image {
@@ -45,4 +36,103 @@ body {
 
 .about h1 {
   margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  .about-image h1 {
+    font-size: 30px; /* Điều chỉnh kích thước chữ */
+  }
+
+  .about {
+    padding: 20px 30px; /* Giảm padding trên thiết bị di động */
+    font-size: 16px; /* Giảm kích thước chữ cho phù hợp */
+  }
+
+  .about h1 {
+    margin-bottom: 30px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử trong footer theo chiều dọc */
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    margin-bottom: 20px;
+  }
+
+  /* Chỉnh sửa menu toggle */
+  .menu-toggle {
+    display: block; /* Hiển thị biểu tượng menu cho các thiết bị di động */
+  }
+
+  .navigation ul {
+    display: none; /* Ẩn menu chính trên các thiết bị di động */
+    flex-direction: column; /* Xếp menu theo chiều dọc khi hiển thị */
+    padding: 0;
+  }
+
+  .navigation ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navigation ul li a {
+    font-size: 18px;
+  }
+
+  .menu-toggle.active + .navigation ul {
+    display: flex; /* Khi nhấn vào menu toggle, hiển thị menu */
+  }
+}
+
+/* Tablet - Các thiết bị có kích thước trung bình */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-image h1 {
+    font-size: 40px; /* Điều chỉnh kích thước chữ */
+  }
+
+  .about {
+    padding: 40px 80px; /* Giảm padding trên tablet */
+    font-size: 17px; /* Điều chỉnh kích thước chữ */
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    margin-bottom: 20px;
+  }
+}
+
+/* Desktop - Các thiết bị máy tính lớn */
+@media (min-width: 1025px) {
+  .about-image h1 {
+    font-size: 50px;
+  }
+
+  .about {
+    padding: 50px 150px;
+    font-size: 18px;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Chia đều footer thành 3 cột */
+    padding: 20px;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    margin-bottom: 0;
+  }
 }

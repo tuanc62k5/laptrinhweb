@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dâu Tằm Kem Phô Mai</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="product-image">
+        <img src="/images/sanpham1.png" alt="Dâu Tằm Kem Phô Mai" />
+      </div>
+      <div class="product-info">
+        <h1>Trà Sữa ToCo</h1>
+        <p>
+          Thêm chút ngọt ngào cho ngày mới với hồng trà nguyên lá, sữa thơm ngậy
+          được cân chỉnh với tỉ lệ hoàn hảo, cùng trân châu trắng dai giòn có
+          sẵn để bạn tận hưởng từng ngụm trà sữa ngọt ngào thơm ngậy thiệt đã.
+        </p>
+        <div class="price">Giá : <span>35.000 vnd</span></div>
+        <div class="quantity-control">
+          <button>-</button>
+          <input type="number" value="1" min="1" />
+          <button>+</button>
+        </div>
+        <button class="order-button">Đặt hàng</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const quantityInput = document.querySelector(".quantity-control input");
+        const decreaseButton = document.querySelector(
+          ".quantity-control button:first-child"
+        );
+        const increaseButton = document.querySelector(
+          ".quantity-control button:last-child"
+        );
+
+        // Xử lý sự kiện khi nhấn nút giảm
+        decreaseButton.addEventListener("click", function () {
+          let currentQuantity = parseInt(quantityInput.value);
+          if (currentQuantity > 1) {
+            quantityInput.value = currentQuantity - 1;
+          }
+        });
+
+        // Xử lý sự kiện khi nhấn nút tăng
+        increaseButton.addEventListener("click", function () {
+          let currentQuantity = parseInt(quantityInput.value);
+          quantityInput.value = currentQuantity + 1;
+        });
+      });
+    </script>
+  </body>
+</html>
