@@ -53,13 +53,7 @@
         </div>
       </div>
     </header>
-    <script>
-      const menuToggle = document.getElementById("menuToggle");
-      const navigation = document.querySelector(".navigation");
-      menuToggle.addEventListener("click", () => {
-        navigation.classList.toggle("active");
-      });
-    </script>
+
     <!-- end nav -->
 
     <!-- star detail -->
@@ -76,11 +70,101 @@
         </p>
         <div class="price">Giá : <span>35.000 vnd</span></div>
         <div class="quantity-control">
-          <button>-</button>
-          <input type="number" value="1" min="1" />
-          <button>+</button>
+          <button type="button" class="btn btn-secondary">-</button>
+          <input type="number" class="form-control mx-2" value="1" min="1" />
+          <button type="button" class="btn btn-secondary">+</button>
         </div>
-        <button class="order-button">Đặt hàng</button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#orderModal"
+        >
+          Đặt Hàng
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="orderModal"
+      tabindex="-1"
+      aria-labelledby="orderModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="orderModalLabel">Đặt Hàng Trà Sữa</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="order_processing.php" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label">Tên:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Số điện thoại:</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="address" class="form-label"
+                  >Địa chỉ giao hàng:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  name="address"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="products" class="form-label">Sản phẩm:</label>
+                <select class="form-select" id="products" name="product_id">
+                  <option value="1">CATCHER-CAFÉ</option>
+                  <option value="2">CREAM-CATCHER</option>
+                  <option value="3">ROYAL MILK CAFÉ</option>
+                  <option value="4">HỒNG TRÀ LATTE</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="quantity" class="form-label">Số lượng:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="quantity"
+                  name="quantity"
+                  min="1"
+                  value="1"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Đặt Hàng
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <!-- end detail -->
@@ -178,5 +262,37 @@
     </footer>
     <!-- end footer -->
     <script src="js/main.js"></script>
+    <script>
+      // Lấy các phần tử cần thao tác
+      const quantityControl = document.querySelector(".quantity-control");
+
+      if (quantityControl) {
+        const quantityInput = quantityControl.querySelector("input");
+        const minusButton = quantityControl.querySelector("button:first-child");
+        const plusButton = quantityControl.querySelector("button:last-child");
+
+        // Gán sự kiện click cho nút trừ (-)
+        minusButton.addEventListener("click", () => {
+          let currentValue = parseInt(quantityInput.value, 10);
+          if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+          }
+        });
+
+        // Gán sự kiện click cho nút cộng (+)
+        plusButton.addEventListener("click", () => {
+          let currentValue = parseInt(quantityInput.value, 10);
+          quantityInput.value = currentValue + 1;
+        });
+
+        // Đảm bảo input chỉ nhận số hợp lệ
+        quantityInput.addEventListener("input", () => {
+          let value = parseInt(quantityInput.value, 10);
+          if (isNaN(value) || value < 1) {
+            quantityInput.value = 1;
+          }
+        });
+      }
+    </script>
   </body>
 </html>
