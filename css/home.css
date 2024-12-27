@@ -668,7 +668,7 @@ textarea {
 .flex {
   display: flex;
 }
-.flex li {
+.flex a {
   margin-right: 20px;
   font-size: 24px;
 }
