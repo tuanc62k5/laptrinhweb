@@ -1,0 +1,110 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Container chính chia thành hai phần */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 50px; /* Khoảng cách giữa 2 phần */
+  margin-top: 130px;
+}
+
+/* Phần nội dung chính bên trái */
+.main-content {
+  flex: 3; /* Chiếm 3 phần trong bố cục */
+}
+
+.main-content h1 {
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.main-content .main-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.note {
+  justify-content: center;
+  margin-left: 380px;
+  margin-top: 15px;
+}
+
+/* Phần sidebar bên phải */
+.sidebar {
+  flex: 1.2; /* Chiếm 1 phần trong bố cục */
+  position: sticky; /* Cố định khi cuộn */
+  top: 50%; /* Cách phía trên 20px */
+  transform: translateY(-45%);
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+
+/* Bố cục từng bài viết "Xem nhiều" */
+.popular-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.popular-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.popular-item p {
+  font-size: 14px;
+  color: #555;
+  flex: 1;
+}
+
+/* Responsive cho thiết bị nhỏ */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Xếp chồng 2 phần */
+  }
+
+  .sidebar {
+    position: static; /* Sidebar không cố định trên màn hình nhỏ */
+    margin-top: 20px;
+  }
+
+  .popular-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
