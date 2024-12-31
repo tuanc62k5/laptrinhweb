@@ -5,7 +5,6 @@
   margin: 0 auto;
 }
 
-/* Main */
 .blog-posts {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -19,7 +18,6 @@
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-  /* width: 370px; */
   margin-bottom: 25px;
 }
 
@@ -55,6 +53,7 @@
 .read-more:hover {
   background: #2980b9;
 }
+
 /* Responsive */
 @media (max-width: 768px) {
   header nav ul {
