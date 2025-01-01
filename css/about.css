@@ -1,4 +1,156 @@
 /* css phần ảnh about */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section (Images) */
+.left {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 300px;
+  border: 5px solid #f9b233;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Right section (Text content) */
+.right {
+  flex: 2;
+  padding: 20px;
+}
+
+.right h1 {
+  color: #f58634;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.right p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.right ul li b {
+  color: #f58634;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left,
+  .right {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .image {
+    max-width: 250px;
+  }
+
+  .right h1 {
+    font-size: 24px;
+  }
+
+  .right p,
+  .right ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .images {
+    gap: 15px;
+  }
+
+  .image {
+    max-width: 200px;
+  }
+
+  .right h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .right p,
+  .right ul li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 5px;
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .right ul {
+    padding-left: 10px;
+  }
+
+  .image {
+    max-width: 150px;
+  }
+
+  .right h1 {
+    font-size: 18px;
+  }
+
+  .right p,
+  .right ul li {
+    font-size: 12px;
+  }
+}
 
 .about-image {
   position: relative; /* Để dùng position cho các phần tử bên trong */
@@ -134,5 +286,112 @@
   .footer-links,
   .footer-contact {
     margin-bottom: 0;
+  }
+}
+
+.about1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-section {
+  flex: 2;
+  padding: 20px;
+}
+
+.text-section h1 {
+  color: #008000;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.text-section em {
+  color: #555;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.text-section hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.text-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.image-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .text-section,
+  .image-section {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .text-section h1 {
+    font-size: 24px;
+  }
+
+  .text-section p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-section h1 {
+    font-size: 20px;
+  }
+
+  .text-section p {
+    font-size: 13px;
+  }
+
+  .image-section img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-section h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .text-section p {
+    font-size: 12px;
+  }
+
+  .image-section img {
+    max-width: 250px;
   }
 }
