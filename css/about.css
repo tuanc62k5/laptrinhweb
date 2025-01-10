@@ -18,7 +18,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Left section (Images) */
 .left {
   flex: 1;
   padding: 10px;
@@ -42,7 +41,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Right section (Text content) */
 .right {
   flex: 2;
   padding: 20px;
@@ -153,28 +151,25 @@ body {
 }
 
 .about-image {
-  position: relative; /* Để dùng position cho các phần tử bên trong */
-  display: inline-block; /* Hoặc bạn có thể dùng block nếu cần toàn bộ chiều rộng */
+  position: relative;
+  display: inline-block;
   width: 100%;
 }
 
 .about-image img {
-  display: block; /* Đảm bảo không có khoảng trống xung quanh ảnh */
-  width: 100%; /* Hoặc đặt kích thước phù hợp */
+  display: block;
+  width: 100%;
   max-height: 500px;
 }
 
 .about-image h1 {
-  position: absolute; /* Đặt thẻ h1 chồng lên ảnh */
-  top: 50%; /* Căn chỉnh giữa theo trục dọc */
-  left: 50%; /* Căn chỉnh giữa theo trục ngang */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Điều chỉnh vị trí để thẻ h1 nằm chính giữa */
-  color: white; /* Chọn màu chữ phù hợp để nổi bật trên ảnh */
-  font-size: 2rem; /* Kích thước chữ phù hợp */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Tạo bóng cho chữ để dễ đọc hơn */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
@@ -192,12 +187,12 @@ body {
 
 @media (max-width: 767px) {
   .about-image h1 {
-    font-size: 30px; /* Điều chỉnh kích thước chữ */
+    font-size: 30px;
   }
 
   .about {
-    padding: 20px 30px; /* Giảm padding trên thiết bị di động */
-    font-size: 16px; /* Giảm kích thước chữ cho phù hợp */
+    padding: 20px 30px;
+    font-size: 16px;
   }
 
   .about h1 {
@@ -206,7 +201,7 @@ body {
 
   .footer-container {
     display: flex;
-    flex-direction: column; /* Xếp các phần tử trong footer theo chiều dọc */
+    flex-direction: column;
     align-items: center;
   }
 
@@ -218,12 +213,12 @@ body {
 
   /* Chỉnh sửa menu toggle */
   .menu-toggle {
-    display: block; /* Hiển thị biểu tượng menu cho các thiết bị di động */
+    display: block;
   }
 
   .navigation ul {
-    display: none; /* Ẩn menu chính trên các thiết bị di động */
-    flex-direction: column; /* Xếp menu theo chiều dọc khi hiển thị */
+    display: none;
+    flex-direction: column;
     padding: 0;
   }
 
@@ -237,19 +232,18 @@ body {
   }
 
   .menu-toggle.active + .navigation ul {
-    display: flex; /* Khi nhấn vào menu toggle, hiển thị menu */
+    display: flex;
   }
 }
 
-/* Tablet - Các thiết bị có kích thước trung bình */
 @media (min-width: 768px) and (max-width: 1024px) {
   .about-image h1 {
-    font-size: 40px; /* Điều chỉnh kích thước chữ */
+    font-size: 40px;
   }
 
   .about {
-    padding: 40px 80px; /* Giảm padding trên tablet */
-    font-size: 17px; /* Điều chỉnh kích thước chữ */
+    padding: 40px 80px;
+    font-size: 17px;
   }
 
   .footer-container {
@@ -265,7 +259,6 @@ body {
   }
 }
 
-/* Desktop - Các thiết bị máy tính lớn */
 @media (min-width: 1025px) {
   .about-image h1 {
     font-size: 50px;
