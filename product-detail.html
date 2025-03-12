@@ -159,7 +159,11 @@
                   required
                 />
               </div>
-              <button type="submit" class="btn btn-primary w-100">
+              <button
+                type="button"
+                class="btn btn-primary w-100"
+                id="orderButton"
+              >
                 Đặt Hàng
               </button>
             </form>
@@ -168,6 +172,33 @@
       </div>
     </div>
     <!-- end detail -->
+
+    <!-- Modal Thông Báo Thành Công -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            🎉 <strong>Đặt hàng thành công!</strong>
+            <p>Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ liên hệ với sớm.</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="bg-product p-4">
       <div class="container">
@@ -294,6 +325,29 @@
           }
         });
       }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const orderButton = document.getElementById("orderButton");
+
+        if (orderButton) {
+          orderButton.addEventListener("click", function () {
+            // Đóng modal đặt hàng
+            const orderModal = bootstrap.Modal.getInstance(
+              document.getElementById("orderModal")
+            );
+            if (orderModal) {
+              orderModal.hide();
+            }
+
+            // Hiển thị modal thông báo thành công
+            const successModal = new bootstrap.Modal(
+              document.getElementById("successModal")
+            );
+            successModal.show();
+          });
+        }
+      });
     </script>
   </body>
 </html>

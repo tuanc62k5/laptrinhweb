@@ -98,10 +98,11 @@
     </div>
 
     <script>
+      // Xử lý sự kiện submit form
       document
         .getElementById("login-form")
         .addEventListener("submit", function (event) {
-          event.preventDefault();
+          event.preventDefault(); // Ngăn chặn hành vi mặc định của form
           alert("Đăng nhập thành công!");
           window.location.href = "home.html"; // Chuyển hướng về trang chủ
         });
