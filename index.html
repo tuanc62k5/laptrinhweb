@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang Chủ</title>
+    <title>Giới Thiệu</title>
+    <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link
       rel="stylesheet"
@@ -45,9 +46,7 @@
         <div class="login">
           <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
           <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-          <a href="login.html" target="_blank"
-            ><i class="fa-solid fa-user"></i> Đăng Nhập</a
-          >
+          <a href=""><i class="fa-solid fa-user"></i> Đăng Nhập</a>
         </div>
         <div class="menu-toggle" id="menuToggle">
           <i class="fa-solid fa-bars"></i>
@@ -56,240 +55,113 @@
     </header>
     <!-- end nav -->
 
-    <!-- star slide -->
-    <div
-      id="carouselExampleControls"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="/images/anhshop1.jpg"
-            class="banner d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/anhshop2.jpg"
-            class="banner d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/anhshop3.jpg"
-            class="banner d-block w-100"
-            alt="..."
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    <!-- star ảnh giới thiệu -->
+    <div class="about-image">
+      <img src="/images/anhgioithieu.jpg" alt="" />
+      <h1>GIỚI THIỆU</h1>
     </div>
-    <!-- end slide -->
+    <!-- end ảnh giới thiệu -->
 
-    <!-- star product -->
-    <section class="featured-products bg-product">
-      <h2>SẢN PHẨM NỔI BẬT</h2>
-      <div class="product-list">
-        <div class="product-item">
-          <a href="/product-detail.html">
-            <img src="/images/sanpham1.png" alt="Catcher-Café" />
-          </a>
-          <h3>CATCHER-CAFÉ</h3>
-          <p>35.000đ</p>
-        </div>
-        <div class="product-item">
-          <a href="/product-detail.html">
-            <img src="/images/sanpham2.png" alt="Catcher-Café" />
-          </a>
-          <h3>CREAM - CATCHER</h3>
-          <p>40.000đ</p>
-        </div>
-        <div class="product-item">
-          <a href="/product-detail.html">
-            <img src="/images/sanpham3.png" alt="Catcher-Café" />
-          </a>
-          <h3>ROYAL MILK CAFÉ</h3>
-          <p>30.000đ</p>
-        </div>
-        <div class="product-item">
-          <a href="/product-detail.html">
-            <img src="/images/sanpham4.png" alt="Catcher-Café" />
-          </a>
-          <h3>HỒNG TRÀ LATTE</h3>
-          <p>45.000đ</p>
-        </div>
-      </div>
-      <a href="menu.html"> <button class="see-more">Xem Thêm</button></a>
-    </section>
-    <!-- end product -->
-
-    <!-- star content -->
-    <div class="order-process">
-      <h2><span></span>Cách Thức Đặt Hàng<span></span></h2>
-      <div class="steps">
-        <div class="step">
-          <div class="icon"><img src="/images/goidien.png" alt="Phone" /></div>
-          <p>Gọi <strong>0867042630</strong></p>
-        </div>
-        <div class="arrow"><img src="/images/iconmuiten.png" alt="" /></div>
-        <div class="step">
-          <div class="icon"><img src="/images/giohang.png" alt="Cart" /></div>
-          <p>Tạo đơn hàng</p>
-        </div>
-        <div class="arrow"><img src="/images/iconmuiten.png" alt="Cart" /></div>
-        <div class="step">
-          <div class="icon">
-            <img src="/images/vanchuyen.png" alt="Delivery" />
-          </div>
-          <p>Giao hàng</p>
-        </div>
-        <div class="arrow"><img src="/images/iconmuiten.png" alt="Cart" /></div>
-        <div class="step">
-          <div class="icon">
-            <img src="/images/thanhtoan.png" alt="Payment" />
-          </div>
-          <p>Thanh toán</p>
-        </div>
-      </div>
-    </div>
-    <!-- end content -->
-
-    <!-- star about -->
-    <section class="store-intro">
-      <div class="intro-container">
-        <div class="intro-image">
-          <img src="/images/banner6.png" alt="Hình ảnh cửa hàng" />
-        </div>
-        <div class="intro-content">
-          <h2>Giới Thiệu Cửa Hàng</h2>
-          <p>
-            Trà sữa luôn là thức uống gây nghiện không chỉ các bạn trẻ, mà ngay
-            cả những người trung niên, đặc biệt là các chị em. Ngày nay, nếu
-            chạy một vòng quanh phố, bạn sẽ thấy có rất nhiều quán trà sữa mọc
-            lên. Từ các xe trà sữa, đến các thương hiệu trà sữa nổi tiếng như
-            Toco Toco, Bobapop, Phúc Long, Ding Tea,… đua nhau mời gọi.
-            <br /><br />
-            Nhu uống cầu trà sữa là rất lớn, nhiều người ở nhà lâu lâu cũng
-            “thèm trà sữa”. Nắm bắt được nhu cầu đó, các thương hiệu trà sữa
-            không chỉ bán tại chỗ theo truyền thống, mà còn bán online qua mạng.
-            Họ phép khách hàng đặt mua qua các ứng dụng mua hàng như Grab hay
-            Goviet. Ngoài ra, khách còn đặt mua hàng ngay tại website của cửa
-            hàng.
-          </p>
-          <a href="about.html"> <button class="see-more">Xem Thêm</button></a>
-        </div>
-      </div>
-    </section>
-    <!-- end about -->
-
-    <!-- star blog -->
-    <main class="container-blog mt-5">
-      <h1>Bài viết chi tiết</h1>
-      <div class="blog-posts">
-        <article class="post">
-          <img src="/images/banner1.jpg" alt="Cà phê sữa" />
-          <h2>Trà sữa trân châu - Hương vị truyền thống</h2>
-          <p>
-            Khám phá cách pha chế cà phê sữa đúng điệu, mang đậm nét văn hóa
-            Việt Nam.
-          </p>
-          <a href="blog-detail.html" class="read-more">Đọc thêm</a>
-        </article>
-
-        <article class="post">
-          <img src="/images/banner2.png" alt="Trà sữa" />
-          <h2>Sự kiện Noel của shop GoSaGo? Giảm giá cực sốc?</h2>
-          <p>
-            Cập nhật những xu hướng trà sữa mới nhất mà bạn không thể bỏ lỡ.
-          </p>
-          <a href="blog-detail3.html" class="read-more">Đọc thêm</a>
-        </article>
-
-        <article class="post">
-          <img src="/images/banner3.png" alt="Nước ép trái cây" />
-          <h2>Hút khách với các ý tưởng kinh doanh trà sữa độc lạ</h2>
-          <p>
-            Công thức nước ép tốt cho sức khỏe mà bạn có thể tự làm tại nhà.
-          </p>
-          <a href="blog-detail2.html" class="read-more">Đọc thêm</a>
-        </article>
-      </div>
-    </main>
-    <!-- end blog -->
-
-    <!-- star oder-form -->
-    <div class="bg-product p-4">
+    <!-- star giới thiệu -->
+    <div class="about">
+      <h1>Giới Thiệu</h1>
       <div class="container">
-        <div class="form-section">
-          <h2>Thông Tin Đặt Hàng</h2>
-          <form>
-            <label for="name">Họ Và Tên</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Nhập họ và tên"
-            />
-
-            <label for="address">Địa Chỉ</label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder="Nhập địa chỉ"
-            />
-
-            <label for="phone">Số Điện Thoại</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Nhập số điện thoại"
-            />
-
-            <label for="notes">Ghi Chú</label>
-            <textarea
-              id="notes"
-              name="notes"
-              placeholder="Nhập ghi chú"
-            ></textarea>
-
-            <button class="btn-form" type="submit">Đặt Hàng</button>
-          </form>
+        <div class="left">
+          <div class="images">
+            <img src="images/about.png" alt="Ảnh văn phòng" class="image" />
+          </div>
         </div>
-        <div class="map-section">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.914588884159!2d105.7760428148838!3d21.0362374859946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abacdfb2f759%3A0x22d8b58d134f08f0!2zUGhhbiBUaOG7gyBUaGnhu4d1IFRo4bqv!5e0!3m2!1sen!2s!4v1696764924774!5m2!1sen!2s"
-            width="100%"
-            height="100%"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
+        <div class="right">
+          <h1>Chúng tôi là ai?</h1>
+          <p>
+            <b>Shop GoSaGo</b> Chúng tôi cam kết cung cấp cho các chủ quán trà
+            sữa, đồ uống sáng tạo những thiết bị và nguyên liệu pha chế chất
+            lượng, đa dạng, cập nhật xu hướng mới nhất, quy mô lớn nhất trên thị
+            trường. <br />
+            Với tầm nhìn này, chúng tôi luôn đặt mục tiêu góp phần thúc đẩy sự
+            phát triển của ngành công nghiệp đồ uống tại Việt Nam, mang đến cho
+            khách hàng sự an tâm và chất lượng dịch vụ vượt trội.
+          </p>
+          <ul>
+            <li>
+              <p>
+                <i class="fa-solid fa-desktop"></i>
+                Làm việc bằng cả trái tim mang đến cho khách hàng sản phẩm tốt
+                nhất với chi phí hợp lý nhất.
+              </p>
+              <p>
+                <i class="fa-solid fa-camera-retro"></i>
+                Giao diện quản trị thân thiện và chuyên nghiệp, giúp khách hàng
+                có thể dễ dàng thao tác.
+              </p>
+              <p>
+                <i class="fa-solid fa-spinner"></i>
+                Đội ngũ trẻ trung, năng động và sáng tạo, luôn cập nhật những
+                công nghệ mới nhất.
+              </p>
+              <p>
+                <i class="fa-solid fa-gear"></i>
+                Thể hiện vai trò của một website bán trà sữa.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
+      <p>
+        Luôn tâm huyết với việc khai thác nguồn nông sản Việt Nam để tạo ra
+        những ly thức uống tươi ngon, an toàn và giàu giá trị dinh dưỡng, Go
+        SaGo mở cửa hàng đầu tiên vào năm 2024, mang trong mình lòng đam mê và
+        khát vọng xây dựng một thương hiệu trà sữa thuần Việt, mang đậm hương vị
+        quê hương.Go SaGo tin rằng thưởng thức một ly trà sữa được pha chế từ
+        trà Mộc Châu, trân châu từ sắn dây Nghệ An hay mứt dâu tằm từ Đà Lạt sẽ
+        là những trải nghiệm hoàn toàn khác biệt và tuyệt vời nhất cho những
+        khách hàng của mình. <br />
+      </p>
+      <div class="about1">
+        <div class="text-section">
+          <h1>Sứ mệnh của shop GoSaGo</h1>
+          <p><em>"Cửa hàng số 1 việt nam"</em></p>
+          <hr />
+          <p>
+            GoSaGo cung cấp các giải pháp kinh doanh chuyên nghiệp và đa dạng
+            cho các chủ quán cà phê, trà sữa và các mô hình kinh doanh đồ uống,
+            giúp chủ quán dễ dàng quản lý và vận hành cửa hàng của mình. Chúng
+            tôi muốn giúp các chủ quán kinh doanh đồ uống trên toàn thế giới
+            phát triển và thành công trong kinh doanh của mình, từ việc mở quán
+            mới đến mở rộng thương hiệu đồ uống của riêng họ.
+          </p>
+          <p>
+            Tất cả những điều đó, GoSaGo cam kết mang đến cho khách hàng của
+            mình các sản phẩm và dịch vụ chất lượng cao, uy tín và đáng tin cậy.
+          </p>
+        </div>
+        <div class="image-section">
+          <img src="images/about1.jpg" alt="Autoshop Image" />
+        </div>
+      </div>
+      <p>
+        <br />
+        Cũng chính từ sự khác biệt đó, thương hiệu Go SaGo đã có những bước phát
+        triển thần tốc và dần chiếm lĩnh thị trường trà sữa với hơn 1 cửa hàng
+        trải dài trên toàn quốc. Cột mốc năm 2024 đánh dấu ước mơ vươn xa biển
+        lớn của thương hiệu khi Go SaGo chính thức đặt chân lên nước Mỹ và tiếp
+        nối thành công tại Úc, Nhật Bản, Hàn Quốc, Singapore,…
+      </p>
+      <p>
+        Trà sữa luôn là thức uống gây nghiện không chỉ các bạn trẻ, mà ngay cả
+        những người trung niên, đặc biệt là các chị em. Ngày nay, nếu chạy một
+        vòng quanh phố, bạn sẽ thấy có rất nhiều quán trà sữa mọc lên. Từ các xe
+        trà sữa, đến các thương hiệu trà sữa nổi tiếng như Toco Toco, Bobapop,
+        Phúc Long, Ding Tea,… đua nhau mời gọi. <br /><br />
+        Nhu uống cầu trà sữa là rất lớn, nhiều người ở nhà lâu lâu cũng “thèm
+        trà sữa”. Nắm bắt được nhu cầu đó, các thương hiệu trà sữa không chỉ bán
+        tại chỗ theo truyền thống, mà còn bán online qua mạng. Họ phép khách
+        hàng đặt mua qua các ứng dụng mua hàng như Grab hay Goviet. Ngoài ra,
+        khách còn đặt mua hàng ngay tại website của cửa hàng.
+      </p>
+      <hr />
     </div>
-    <!-- end oder-form -->
+    <!-- end giới thiệu -->
 
     <!-- star footer -->
     <footer class="footer">
@@ -308,23 +180,20 @@
             <li><a href="home.html">Trang Chủ</a></li>
             <li><a href="about.html">Giới Thiệu</a></li>
             <li><a href="menu.html">Thực Đơn</a></li>
-            <li><a href="blog.html">Bài Viết</a></li>
+            <li><a href="blog.html">Tin Tức</a></li>
           </ul>
         </div>
         <div class="footer-contact">
           <h2>Fanpage</h2>
           <ul class="flex">
-            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
+            <a href="https://mail.google.com/mail/u/0/#inbox"
               ><i class="fa-regular fa-envelope"></i
             ></a>
             <a
               href="https://www.facebook.com/profile.php?id=100072979329841&mibextid=ZbWKwL"
-              target="_blank"
               ><i class="fa-brands fa-facebook"></i
             ></a>
-            <a
-              href="https://www.tiktok.com/@tuanc6k24?_t=8sYjwFsaGcj&_r=1"
-              target="_blank"
+            <a href="https://www.tiktok.com/@tuanc6k24?_t=8sYjwFsaGcj&_r=1"
               ><i class="fa-brands fa-tiktok"></i
             ></a>
           </ul>
